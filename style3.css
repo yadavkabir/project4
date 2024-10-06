@@ -6,9 +6,7 @@
 }
 
 body {
-    /* display: flex;
-    flex-direction: column;
-    min-height: 100vh; */
+
     background: #f0f0f0;
     background-size: cover;
     background-position: center;
@@ -16,16 +14,12 @@ body {
 
 header {
 
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%; */
     padding: 20px 100px;
-    background: #162938;
+    background: #268ada;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 99;
+
 }
 
 .navigation a {
@@ -61,37 +55,25 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px 100px;
+    
+    padding: 20px 64px;
 
-    /* background: rgba(0, 0, 0, 0.5); */
-    /* position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 100;
-    display: none; */
+
 }
 
 .wrapper {
-    position: absolute;
-    width: 400px;
-    height: 440px;
-    margin: 20px 20px;
-    padding: 0px 10px;
-    
-    background: transparent;
+    position: relative; /* change from absolute to relative */
+   
+    width: max-content;
+    height: max-content;
+    margin: 20px;
+    padding: 10px;
+    overflow: hidden;
+    background: #fff;
     border: 2px solid rgba(255, 255, 255, 0.5);
     border-radius: 20px;
-    /* backdrop-filter: blur(20px); */
     box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; */
-    /* transform: scale(0); */
-    transition: transform .5s ease, height .2s ease;
+    transition: transform 0.5s ease, height 0.2s ease;
 }
 
 .wrapper.active-popup {
@@ -103,33 +85,34 @@ header {
 }
 
 .wrapper .form-box {
-    width: 100%;
+
     padding: 20px 25px;
     margin: 22px 0px;
 }
 
 .wrapper .form-box.login {
     transition: transform .18s ease;
-    transform: translateX(0);
+    
 }
 
 .wrapper.active .form-box.login {
     transition: none;
-    transform: translateX(-400px);
+    
 }
 
 .wrapper .form-box.register {
-    position: absolute;
+    position: relative;
     transition: none;
-    transform: translateX(400px);
+    
 }
 
 .wrapper.active .form-box.register {
     transition: transform .18s ease;
-    transform: translateX(0);
+    
 }
 
 .wrapper .icon-close {
+   
     position: absolute;
     top: 0;
     right: 0;
@@ -143,7 +126,7 @@ header {
     align-items: center;
     border-bottom-left-radius: 20px;
     cursor: pointer;
-    z-index: 1;
+   
 }
 
 .form-box h2 {
@@ -153,17 +136,15 @@ header {
 }
 
 .input-box {
-    position: relative;
-    width: 100%;
-    /* height: 50 px; */
+   
+    position: relative; /* Ensure it stays within normal flow */
+    
     margin: 30px 0;
     padding: 1px;
     background: #fff;
     border: 1px solid #162938;
     border-radius: 10px;
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
+
 }
 
 .input-box .icon {
@@ -176,8 +157,7 @@ header {
 }
 
 .input-box input {
-    width: 100%;
-    height: 100%;
+    
     padding: 10px;
     padding-left: 40px;
     font-size: 1.1em;
@@ -193,7 +173,7 @@ header {
     top: 13px;
     left: 30px;
     
-    /* padding: 10px; */
+    
     font-size: 1.1em;
     color: #162938;
     pointer-events: none;
@@ -222,7 +202,8 @@ header {
 
 .remember-forgot a {
     font-size: 1.1em;
-    color: #162938;
+    padding-left: 33px;
+    color: #255c86;
     text-decoration: none;
 }
 
